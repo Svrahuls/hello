@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHAAVA Collection | Wahe Jewellery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: black;
+      color: #FFD700;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+      margin-bottom: 1rem;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .product-card {
+      background-color: #FFF8DC;
+      color: black;
+      padding: 1rem;
+      border-radius: 1rem;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-image {
+      background-color: #ccc;
+      aspect-ratio: 1 / 1;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .shop-button {
+      display: inline-block;
+      background-color: #FFD700;
+      color: black;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .shop-button:hover {
+      background-color: #FFC300;
+    }
+
+    footer {
+      background-color: #FFD700;
+      color: black;
+      padding: 2rem 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .footer-section {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .footer-section.center {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-section.right {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .newsletter-input {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid black;
+      border-radius: 0.375rem;
+    }
+
+    .subscribe-button {
+      background-color: black;
+      color: #FFD700;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .subscribe-button:hover {
+      background-color: #111;
+    }
+
+    @media (min-width: 768px) {
+      .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="container">
+    <h2>SHAVA Collection</h2>
+    <p class="description">
+      A bold blend of tradition and modernity — the SHAAVA Collection brings you refined silhouettes with edge.
+    </p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3>Product 1</h3>
+        <p>₹ Price</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3>Product 2</h3>
+        <p>₹ Price</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3>Product 3</h3>
+        <p>₹ Price</p>
+      </div>
+      <div class="product-card">
+        <div class="product-image"></div>
+        <h3>Product 4</h3>
+        <p>₹ Price</p>
+      </div>
+    </div>
+
+    <a href="/collections/shaava" class="shop-button">Shop Now</a>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <img src="insta logo.png" alt="Instagram" width="24" height="24">
+        <span>@wahejewellery</span>
+      </div>
+      <div class="footer-section center">
+        <p><em>“Everyday Jewellery. Timelessly You.”</em></p>
+      </div>
+      <div class="footer-section right">
+        <label for="newsletter">Subscribe to our newsletter</label>
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="email" id="newsletter" class="newsletter-input" placeholder="Enter your email">
+          <button class="subscribe-button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.subscribe-button').addEventListener('click', () => {
+      const email = document.getElementById('newsletter').value;
+      alert(`Subscribed with ${email}`);
+    });
+  </script>
+
+</body>
+</html>
